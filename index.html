@@ -1,9 +1,18 @@
-<embed
-id="SomeName"
-type="application/x-java-applet;version=1.6"
-width="999" height="999"
-archive="Blackjack.jar"
-code="Blackjack.class"
-pluginspage="http://java.com/download/"
-myParam="YourParams" />
- 
+<head>
+  <script src=
+      "https://www.java.com/js/deployJava.js"></script>
+</head>
+  <body>
+
+    <script>
+        var attributes = {codebase: 'http://www.scottdikowitz.com/Blackjack',
+                          code: 'Blackjack.class',
+                          archive: 'Blackjack.jar',
+                          width: '800',
+                          height: '600'};
+        var parameters = {java_arguments: '-Xmx256m'}; // customize per your needs
+        var version = '1.5'; // JDK version
+        deployJava.runApplet(attributes, parameters, version);
+    </script>
+
+</body>
